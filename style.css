@@ -1,11 +1,3 @@
-
-/* 
-- Very Dark Grayish Blue: hsl(217, 19%, 35%)
-- Desaturated Dark Blue: hsl(214, 17%, 51%)
-- Grayish Blue: hsl(212, 23%, 69%)
-- Light Grayish Blue: hsl(210, 46%, 95%) 
-*/
-
 *, ::after {
     box-sizing: border-box;
     padding: 0;
@@ -16,14 +8,10 @@ html, body {
     height: 100%;
 }
 
-html {
-    /* font-size: 10px; */
-}
-
 body {
     font-family: 'Manrope', sans-serif;
-    /* font-size: 100px; */
 }
+
 
 h2 {
     font-size: 3rem;
@@ -47,45 +35,25 @@ p {
     word-spacing: .4rem;
     margin-top: 2rem;
     font-weight: 500;
-    /* color: hsl(212, 23%, 69%); */
     color:  hsl(217, 19%, 35%);
     opacity: .7;
 }
 
-.content, .content-img, .content-bottom{
-    /* border-radius: 10px; */
-}
-
 .main-wrapper {
     background: hsl(210, 46%, 95%);
-    /* background:red; */
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
-    /* position: relative;     */
-    /* z-index: -1; */
-    /* padding: 20rem; */
-    /* border-radius: 10px; */
-    /* overflow: hidden; */
 }
 
 .content-wrapper {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: 1.2fr 2fr;
-    /* grid-template-areas: 
-    "content-img content"
-    "content-img content-bottom"; */
     grid-template-areas: 
     "content-img main-content"; 
     max-width: 1440px;
-    /* border-radius: 10px; */
-    /* overflow: hidden; */
     transform: scale(.8);
 
 }
@@ -93,14 +61,9 @@ p {
 .main-content {
     display: grid;
     grid-template-rows: 2.5fr 1fr;
-    /* grid-template-rows: 1fr 9rem; */
     grid-template-areas: 
     "content"
     "content-bottom";
-    /* overflow: hidden; */
-    /* position: relative; */
-    border-radius: 10px;
-    
 }
 
 .content-img {grid-area: content-img;}
@@ -111,42 +74,34 @@ p {
 .content{
     padding: 3rem 4rem;
     background: white;
+    border-top-right-radius: 10px;
 }
 .content-img {
     background-image: url(./images/drawers.jpg);
     background-repeat:no-repeat;
-    /* background-position: center; */
     background-size: cover;
-    /* height: 5rem;
-    width: 5rem; */
-    /* width: 1009px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .content-bottom {
-    /* display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    height: 100%;
-    width: 100%; */
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: space-between;
     padding: 0 3rem;
-    /* padding-bottom: 3rem; */
     align-items: center;
     background: white;
-    /* position: relative; */
+    border-bottom-right-radius: 10px;
 }
 .content-bottom-img {
     background-image: url(./images/avatar-michelle.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    
     background-size: cover;
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
-    /* position: relative; */
 }
 
 
@@ -157,13 +112,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: hsl(210, 46%, 95%) ;
-    /* position: relative; */
-    /* height: 5rem;
-    width: 5rem; */
     border-radius: 50%;
-    /* padding: 20rem; */
-    /* position: relative; */
-    /* z-index: 100; */
 }
 
 .content-bottom-share:hover + .tooltip{
@@ -171,31 +120,12 @@ p {
 }
 
 .content-bottom-share:hover p{
-    /* color: rebeccapurple; */
     height: 10rem;
-    /* all: unset; */
 }
-
-/* p:hover .tooltip {
-    visibility: visible;
- 
-} */
 
 .content-bottom-svg {
     position: relative;
 }
-
-/* .content-bottom-svg:hover ~ .tooltip{
-    color: rebeccapurple;
-    visibility: visible;
-} */
-
-/* p:hover {
-    color: rebeccapurple;
-} */
-/* h2:hover > p {
-    color: rebeccapurple;
-} */
 
 .tooltip {
     background: hsl(217, 19%, 35%);
@@ -209,23 +139,20 @@ p {
     z-index: 100;
     padding: 1.2rem 3rem;
     border-radius: 15px;
-    /* transform: scale(0); */
     visibility: hidden;
 }
 
-/* .tooltip {
-    background: hsl(217, 19%, 35%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25rem;
+.tooltip::after {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    bottom: -1rem;
+    right: 11rem;
+    transform: rotate(45deg);
     position: absolute;
-    top: 400px;
-    right: 400px;
-    z-index: 10;
-    padding: 1.2rem 3rem;
-    border-radius: 15px;
-} */
+    background: hsl(217, 19%, 35%);
+
+}
 
 .tooltip h2 {
     font-size: 1.2rem;
@@ -233,7 +160,6 @@ p {
     color: hsl(210, 46%, 95%) ;
     letter-spacing: .5rem;
     opacity: .9;
-    /* height: ; */
     line-height: 2.3rem;
 }
 
@@ -242,17 +168,8 @@ p {
     height: 2.1rem;
     width: 2.1rem;
 }
-/* .content-bottom-share span {
-    display: block;
-    position: absolute;
-} */
-
-
 
 .content-bottom-share img {
-
-    /* height: auto;
-    width: auto; */
     height: 1.8rem;
     width: 1.8rem;
 }
@@ -264,10 +181,7 @@ p {
 }
 
 .content-bottom2 {
-    /* visibility: hidden; */
-    /* display: none; */
     display: flex;
-    justify-content: center;
     padding: 0 4rem;
     align-items: center;
     visibility: hidden;
@@ -283,54 +197,44 @@ p {
 }
 
 .content-bottom2 h2{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 100;
     color: hsl(210, 46%, 95%) ;
     letter-spacing: .5rem;
-    opacity: .9;
+    opacity: .7;
     color: white;
-    /* height: ; */
     line-height: 3.3rem;
+    position: relative;
 }
 
 .content-bottom-share2 {
     display: flex;
-    height: 3.4rem;
-    width: 3.4rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 1.7rem;
+    height: 4rem;
+    width: 4rem;
     justify-content: center;
     align-items: center;
     background-color: hsl(210, 46%, 95%) ;
-    /* position: relative; */
-    /* height: 5rem;
-    width: 5rem; */
     border-radius: 50%;
     background: hsl(210, 46%, 95%);
+    z-index: 1;
+    visibility: hidden;
 }
 
-.content-bottom2 img:nth-of-type(1),
-.content-bottom2 img:nth-of-type(2),
-.content-bottom2 img:nth-of-type(3){
+.content-bottom2 > img{
     padding: 10px;
+    height:3.8rem;
 }
-
-/* .content-bottom2 h2 {
-    margin-right: auto;
-} */
 
 .content-bottom-share2 {
     margin-left: auto;
 }
 
-
-/* @media screen and (min-width : 1224px){ */
 @media only screen and (max-width:900px){
     html {
         font-size: 11px;
-    }
-
-    body {
-        /* width: 100%; */
-        /* height: auto; */
     }
 
     h2 {
@@ -338,14 +242,10 @@ p {
     }
 
     .main-wrapper {
-        /* height: 100%; */
         overflow: hidden;
     }
 
     .content-img {
-        /* background-size: auto; */
-        /* height: auto;
-        width: auto; */
         height: 200px;
         width: 100%;
     }
@@ -361,62 +261,39 @@ p {
     .content-bottom {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+        /* display: none; */
     }
 
     .content-wrapper {
         display: block;
-
     }
 
-    /* .content-bottom-share:hover + .main-content{
-        overflow: initial;
-    }
-     */
-
-    
     .main-content {
         grid-template-rows: 1fr 80px;
-        /* grid-template-rows: 1fr auto; */
-        /* grid-template-areas: 
-        "content-img"
-        "content"; */
-        /* background: rebeccapurple; */
     }
 
-    .content-bottom {
-        /* background: red; */
-         /* background: hsl(217, 19%, 35%); */
-
-    }
-
-
-    .content-bottom {
-        /* transform: scale(0); */
-        /* visibility: hidden; */
-        position: relative;
-        /* z-index: -1; */
+    .content-bottom-share {
+        visibility: hidden;
     }
 
     .content-bottom2 {
-        /* visibility: visible; */
-        /* display: none; */
-        /* display: block; */
-        /* display: none; */
-        /* z-index:  10; */
+        visibility: hidden;
     }
 
-    .content-bottom-share:hover() > .content-bottom2{
+    .content-bottom-share2{
         visibility: visible;
-        /* display: flex; */
-        /* z-index: 100; */
+    }
+
+    .content-bottom-share2:active .iconatics *{
+        stroke: white;
+    }
+
+    .content-bottom-share2:active + .content-bottom2{
+        visibility: visible;
     }
     
     .content-bottom-share:hover + .tooltip{
         visibility: hidden;
     }
 
-    /* p:hover h2 {
-        color: rebeccapurple;
-    } */
-    
 }
